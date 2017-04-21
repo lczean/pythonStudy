@@ -6,4 +6,6 @@
 # @Version : 1.0
 
 
-print("Learning PythonStudy!")
+print("Learning PythonStudy!!")
+
+print("Learning PythonStudy!!")
