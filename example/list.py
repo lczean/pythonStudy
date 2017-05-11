@@ -63,10 +63,10 @@ print("***************")
 
 
 def print_lists(the_list):
-    for each_item in the_list:
-        if isinstance(each_item, list):
-            print_lists(each_item) #递归,python默认递归深度不能超过100个
+    for each_items in the_list:
+        if isinstance(each_items, list):  # 判断是否是列表
+            print_lists(each_items)  # 递归,python默认递归深度不能超过100个
         else:
-            print(each_item)
+            print(each_items)
 
 print_lists(MOVIES)
