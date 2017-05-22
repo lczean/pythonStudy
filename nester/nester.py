@@ -14,14 +14,19 @@
 # 准备好之后，就可以使用PyPll来发布你的模块，从而使你的代码可供其他人使用。
 
 
-def print_lists(the_list):
+def print_lists(the_list, indent=False, level=0):
     '''
     这个函数取一个位置参数，名为"the_list"，
     这个可以是任何python列表，（也可以是包含嵌套列表的列表）。
     所指定的列表中的每个数据项（递归的）输出到屏幕上，各数据项个占一行。
+    第二个参数，名为level；用来处理嵌套列表时插入制表符。
     '''
     for each_items in the_list:
-        if isinstance(each_items, list):# 判断是否是列表
-            print_lists(each_items)  # 递归,python默认递归深度不能超过100个
+        if isinstance(each_items, list):  # 判断是否是列表
+            # 递归,python默认递归深度不能超过100个
+            print_lists(each_items, indent, level + 1)
         else:
+            if indent:
+                for tab_stop in range(level):
+                    print("\t", end="")
             print(each_items)

@@ -1,0 +1,6 @@
+man:xxxxxx!!!
+Other man:yyyyyyy!!!
+man:ssssss!!!
+Other man:xxxxx.wwwww:ssss.
+(pause)
+man:no,it isn't!
